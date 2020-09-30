@@ -1,0 +1,35 @@
+body { font-family: 'Lato', sans-serif; font-size:16px; background-color: #505050; }
+
+#topPanel { margin:0; position:relative; }
+
+.bannerContainer { padding:0; }
+
+#bottomPanel {
+  margin:0;
+}
+
+.sidebarC { 
+    background-color:#505050; 
+    color: white;
+    position:relative;
+}
+
+.bodyC {
+    position:relative;
+    padding:0;
+    background-color:#f1f1f1;
+    margin-right:-15px;
+}
+
+.sidebarC header { 
+    position:relative;
+    background-color: #690800;
+    height:110px; 
+    font-size:1.25rem;
+    margin:0 -15px;
+}
+
+.sidebarC header p { 
+    display:inline;
+    padding-left:10px;
+}

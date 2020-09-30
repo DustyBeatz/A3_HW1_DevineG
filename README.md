@@ -27,14 +27,14 @@ Once you've gotten your sass modules written they need to be imported into the m
 @import 'modules/_'name'.scss'
 
 
-Now your modules are linked to a single file going into your terminal window write the command:
+Now your modules are linked to a single file. Go into your terminal window write the command:
 
 sass --watch sass:css --style compressed
 
 
-This tells sass to watch any changes that happen within your modules, compress them into one css file, and write them as a master css file with your css folder.
+This tells sass to watch any changes that happen within your modules, compress them into one css file, and write them as a master css file within your css folder.
 
-From here sass will continue to watch your modules that you linked inside the master and apply the changes to the compressed master css file. 
+From here sass will continue to watch the modules linked inside the master.scss and apply the changes to master.css in a compressed format. 
 
 ## Conclusion
 

@@ -79,24 +79,30 @@
 
 
           <div class="profPanel panel panel-default">
-
             <div class="profPanelText">
 
               <!-- <h2 class="hidden">Prof Panel</h2> -->
 
               <!-- REPLACE THIS CONTENT WITH DATA PULLED IN FROM classData.js -->
-              <div class="profBox">
-              <p class="text-muted"><span class="text-primary"></span></p>
-              <p></p>
-              <!-- class times go here -->
-              <ul class="list-inline"></ul>
-            </div>
+
+
+              <section class="prof-section"></section> <!--this is where we will load the content-->
+              
+
+             <template id="prof-template">  <!--This will not show up on the page-->
+               <div class="profUser">
+                  <p class="text-muted"><span class="text-primary"></span></p>
+                  <p></p>
+                  <!-- class times go here -->
+                  <ul class="list-inline"></ul>
+                </div> 
+              </template>
+
+
+
 
               <!-- END DYNAMIC DATA -->
             </div>
-
-
-
 
             <img src="images/eEdu_prof.jpg" alt="prof image" class="img-circle profileImg">
           </div>

@@ -13,9 +13,9 @@ let myReq = new XMLHttpRequest;
     //this is a passive listener function - it gets invoked for every stage of the AJAX request. When the request is done and the data payload is returned from the server it passes that data to the handleDataSet function
 
     function handleRequest() {
-        debugger;
+        // debugger;
         if (myReq.readyState === XMLHttpRequest.DONE) {
-            debugger;
+            // debugger;
             // check status here and proceed
             if (myReq.status === 200) {
                 // 200 means done and dusted, ready to go with the dataset!
@@ -56,23 +56,22 @@ let myReq = new XMLHttpRequest;
 
     function handleDataSet(data) {
 
-        let textData = JSON.parse(data),
-        profSection = document.querySelector(".profPanel"),
-        profDesc = document.querySelector(".profPanelText").Content;
+        let profData = JSON.parse(data),
+        profSection = document.querySelector(".prof-section"),
+        profTemplate = document.querySelector("#prof-template").content;
 
-            for (let prof in textData) {
+        for(let prof in profData) {
+            debugger;
 
 
+            let currentProf = profTemplate.cloneNode(true),
+            currentProfText = currentProf.querySelector(".profUser").children
 
+            currentProfText[1].textContent = profData[prof].coursename;
 
-                let currentProf = profDesc.cloneNode(true),
-                currentProfText = currentProf.querySelector('.profBox').children;
+            profSection.appendChild(currentProf);
+        }
 
-                currentProfText[1].textContent = textData[prof].coursename;
-                currentProfText[2].textContent = textData[prof].profname;
-                currentProfText[3].textContent = textData[prof].classtime;
-
-                profSection.appendChild(currentProf);
-            }
+        console.log(data);
     }
 })();

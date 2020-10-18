@@ -19,7 +19,7 @@ let myReq = new XMLHttpRequest;
             // check status here and proceed
             if (myReq.status === 200) {
                 // 200 means done and dusted, ready to go with the dataset!
-                handleDataSet(myReq.responseText);
+                handleDataSet(myReq.response);
 
             } else {
                 // probably got some kind of error code, so handle that 
@@ -68,6 +68,9 @@ let myReq = new XMLHttpRequest;
             currentProfText = currentProf.querySelector(".profUser").children
 
             currentProfText[1].textContent = profData[prof].coursename;
+            currentProfText[2].textContent = profData[prof].courscode;
+            currentProfText[3].textContent = profData[prof].profname;
+            currentProfText[4].textContent = profData[prof].classtime;
 
             profSection.appendChild(currentProf);
         }

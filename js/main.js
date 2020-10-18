@@ -1,4 +1,6 @@
 (()=>{
+
+
 let myReq = new XMLHttpRequest;
 
     // add an event handler so that we can track the stages of the request and respond accordingly
@@ -19,7 +21,8 @@ let myReq = new XMLHttpRequest;
             // check status here and proceed
             if (myReq.status === 200) {
                 // 200 means done and dusted, ready to go with the dataset!
-                handleDataSet(myReq.response);
+                console.log(myReq);
+                 handleDataSet(myReq.responseText);
 
             } else {
                 // probably got some kind of error code, so handle that 
@@ -60,20 +63,23 @@ let myReq = new XMLHttpRequest;
         profSection = document.querySelector(".prof-section"),
         profTemplate = document.querySelector("#prof-template").content;
 
-        for(let prof in profData) {
-            debugger;
+        currentProf = profTemplate.querySelector(".profUser").children
+
+        currentProf[1].textContent.coursename;
+
+        // for (let prof in profData) {
+        //     debugger;
 
 
-            let currentProf = profTemplate.cloneNode(true),
-            currentProfText = currentProf.querySelector(".profUser").children
+        //     // let currentProf = profTemplate.cloneNode(true),
 
-            currentProfText[1].textContent = profData[prof].coursename;
-            currentProfText[2].textContent = profData[prof].courscode;
-            currentProfText[3].textContent = profData[prof].profname;
-            currentProfText[4].textContent = profData[prof].classtime;
+        //     // currentProfText[2].textContent = profData[prof].courscode;
+        //     // currentProfText[3].textContent = profData[prof].profname;
+        //     // currentProfText[4].textContent = profData[prof].classtime;
 
-            profSection.appendChild(currentProf);
-        }
+        //     // profSection.appendChild(prof);
+        //     console.log(currentProf);
+        // }
 
         console.log(data);
     }

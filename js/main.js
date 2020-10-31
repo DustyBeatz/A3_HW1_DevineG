@@ -60,26 +60,23 @@ let myReq = new XMLHttpRequest;
     function handleDataSet(data) {
 
         let profData = JSON.parse(data),
-        profSection = document.querySelector(".prof-section"),
-        profTemplate = document.querySelector("#prof-template").content;
-
-        currentProf = profTemplate.querySelector(".profUser").children
-
-        currentProf[1].textContent.coursename;
-
-        // for (let prof in profData) {
-        //     debugger;
+        profCourseName = document.querySelector(".text-muted-coursename"),
+        profCourseCode = document.querySelector(".text-primary-coursecode"),
+        profName = document.querySelector(".profuser-profname"),
+        classTime = document.querySelector(".list-inline-classtime"),
+        profCourseName2 = document.querySelector(".profCourseName"),
+        profCourseDesc = document.querySelector(".profCourseDesc");
 
 
-        //     // let currentProf = profTemplate.cloneNode(true),
 
-        //     // currentProfText[2].textContent = profData[prof].courscode;
-        //     // currentProfText[3].textContent = profData[prof].profname;
-        //     // currentProfText[4].textContent = profData[prof].classtime;
+        profCourseName.textContent = profData.coursename;
+        profCourseCode.textContent = profData.coursecode;
+        profName.textContent = profData.profname;
+        classTime.textContent = profData.classtime;
+        profCourseName2.textContent = profData.coursename;
+        profCourseDesc.textContent = profData.coursedesc;
 
-        //     // profSection.appendChild(prof);
-        //     console.log(currentProf);
-        // }
+        
 
         console.log(data);
     }
